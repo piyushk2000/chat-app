@@ -72,6 +72,9 @@ app.get("/login", (req, res) => {
 app.get("/register", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'build', 'index.html'));
 });
+app.get("/test", (req, res) => {
+  res.send("server working");
+});
 
 const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}`)
